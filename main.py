@@ -6,20 +6,18 @@ import webbrowser
 import Naked
 from Naked.toolshed.shell import execute_js, muterun_js
 
-
-
-
-
 client = discord.Client() #connection to discord
 
-TOKEN = os.environ['TOKEN'] 
+hellos = ["hi", "hello", "sup", "wazzup", "suh", "holla", "howdy", "yo", "good afternoon"]
+
+goodbyes = ["goodbye", "bye", "later", "goodnight", "till next time", "ta ta", "cya"]
 
 #def get_quote(): #helper func to return from api
 
 @client.event #register event, async library, callback functions activate when something else happens
 async def on_ready():
   print('We have logged in as {0.user}'.format(client))
-  print('Is your computer helping science? If not, start working [here](https://dcp.work/). ')
+  
   #print(muterun_js('dcp.js').stdout)
   #webbrowser.open('https://dcp.work', new = 0, autoraise = True)
   #webbrowser.get().open('https://www.youtube.com')
@@ -40,6 +38,6 @@ async def on_message(message):
     await message.channel.send(embed=embed)
 
     
-
+TOKEN = os.environ['TOKEN'] 
     
 client.run(TOKEN)
