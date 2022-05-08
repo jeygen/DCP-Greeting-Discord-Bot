@@ -5,8 +5,8 @@ import discord
 client = discord.Client() 
 
 # Lists of targeted words/phrases
-hellos = ["hi", "hello", "sup", "wazzup", "suh", "holla", "howdy", "yo", "good afternoon"]
-goodbyes = ["goodbye", "bye", "later", "goodnight", "till next time", "ta ta", "cya"]
+hellos = ["hi", "Hi", "hello", "Hello", "sup", "wazzup", "suh", "holla", "howdy", "yo", "good afternoon"]
+goodbyes = ["goodbye", "Goodbye", "bye", "Bye", "later", "goodnight", "till next time", "ta ta", "cya"]
 
 @client.event 
 async def on_ready():
